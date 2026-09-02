@@ -18,12 +18,17 @@
 <header>
     <nav class="navbar">
 
-        <div class="logo">
-            <img src="images/bunmny.png"
-     class="logo-sticker"
-     alt="Crochet yarn"> Hooked<span> on Loops</span>
-        </div>
+        <a href="#home" class="logo">
 
+    <img
+        src="images/yarnn.png"
+        alt="Crochet yarn"
+        class="logo-yarn-img"
+    >
+
+    Hooked <span>on Loops</span>
+
+</a>
         <button
     class="mobile-menu-button"
     id="mobile-menu-button"
@@ -142,7 +147,7 @@
             <p>Handmade to wear</p>
         </a>
 
-        <a href="#shop" class="category" onclick="filterProducts('hampers')">
+        <a href="#shop" class="category" onclick="openHamperBuilder()">
             <div>🎁</div>
             <h3>Hampers</h3>
             <p>Made for gifting</p>
@@ -230,7 +235,7 @@
         Wearables
     </button>
 
-    <button onclick="filterProducts('hampers', this)">
+    <button onclick="openHamperBuilder()">
         Hampers
     </button>
 
@@ -241,6 +246,111 @@
 </div>
 
 <div id="product-grid" class="product-grid"></div>
+
+<!-- BUILD YOUR OWN HAMPER -->
+<div id="hamper-builder" class="hamper-builder">
+
+    <div class="hamper-builder-card">
+
+        <span class="hamper-mini-label">
+            BUILD YOUR OWN ♡
+        </span>
+
+        <h2>
+            Create Your Hamper 🧺
+        </h2>
+
+        <p>
+            Pick your favourite handmade pieces
+            and build a hamper made just for you ♡
+        </p>
+
+        <button
+            type="button"
+            onclick="showHamperProducts()"
+            class="hamper-start-button"
+        >
+            Choose Your Items ♡
+        </button>
+
+    </div>
+
+</div>
+
+<!-- YOUR HAMPER -->
+<div id="hamper-selection-box" class="hamper-selection-box">
+
+    <div class="hamper-selection-header">
+        <span>🧺</span>
+
+        <div>
+            <p>YOUR LITTLE BASKET ♡</p>
+            <h3>Your Hamper</h3>
+        </div>
+    </div>
+
+    <div id="hamper-selected-items">
+        <p class="empty-hamper-message">
+            Your hamper is waiting for some handmade cuteness ♡
+        </p>
+    </div>
+
+    <div class="hamper-size-choice">
+
+    <label for="hamper-size">
+        Choose Hamper Size ♡
+    </label>
+
+    <select id="hamper-size" onchange="updateHamperBox()">
+
+        <option value="small" data-charge="50">
+            Small Hamper - ₹50 packing
+        </option>
+
+        <option value="medium" data-charge="80">
+            Medium Hamper - ₹80 packing
+        </option>
+
+        <option value="large" data-charge="120">
+            Large Hamper - ₹120 packing
+        </option>
+
+    </select>
+
+</div>
+
+    <div class="hamper-selection-total">
+        <span>Hamper Total</span>
+
+        <strong>
+            ₹<span id="hamper-total">0</span>
+        </strong>
+    </div>
+
+    <button
+    type="button"
+    class="hamper-order-button"
+    onclick="orderHamperWhatsApp()"
+>
+    Order This Hamper ♡
+</button>
+
+</div>
+
+<!-- HAMPER PRODUCT SELECTION -->
+<div id="hamper-products-area" class="hamper-products-area">
+
+    <div class="hamper-products-heading">
+        <p>PICK YOUR FAVOURITES ♡</p>
+        <h2>Choose Items for Your Hamper</h2>
+    </div>
+
+    <div
+        id="hamper-products-grid"
+        class="hamper-products-grid"
+    ></div>
+
+</div>
 
         <!-- PRODUCT QUICK VIEW POPUP -->
 
@@ -1080,3 +1190,4 @@
  
 </body> 
 </html>             
+   
