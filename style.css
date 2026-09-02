@@ -1,4 +1,4 @@
- * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -5396,3 +5396,347 @@ document
         font-size: 27px;
     }
 }
+
+.hamper-builder {
+    display: none;
+    padding: 40px 20px;
+}
+
+.hamper-builder-card {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 50px 30px;
+    text-align: center;
+    background: #fffaf7;
+    border-radius: 28px;
+    box-shadow: 0 12px 35px rgba(120, 80, 70, 0.08);
+}
+
+.hamper-mini-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #d98d8d;
+}
+
+.hamper-builder-card h2 {
+    margin-bottom: 14px;
+    font-family: "Playfair Display", Georgia, serif;
+    color: #60453f;
+}
+
+.hamper-builder-card p {
+    max-width: 500px;
+    margin: 0 auto 25px;
+    line-height: 1.7;
+    color: #7c625c;
+}
+
+.hamper-start-button {
+    border: none;
+    padding: 14px 26px;
+    border-radius: 999px;
+    background: #d98d8d;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* ===============================
+   YOUR HAMPER BOX
+================================ */
+
+.hamper-selection-box {
+    display: none;
+    max-width: 700px;
+    margin: 35px auto;
+    padding: 28px;
+    background: #fffaf7;
+    border: 1px solid #f1d7d2;
+    border-radius: 26px;
+    box-shadow: 0 12px 35px rgba(120, 80, 70, 0.08);
+}
+
+.hamper-selection-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.hamper-selection-header > span {
+    font-size: 32px;
+}
+
+.hamper-selection-header p {
+    margin: 0 0 3px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #d98d8d;
+}
+
+.hamper-selection-header h3 {
+    margin: 0;
+    font-family: "Playfair Display", Georgia, serif;
+    color: #60453f;
+}
+
+.empty-hamper-message {
+    padding: 25px 10px;
+    text-align: center;
+    color: #9a7a73;
+}
+
+.hamper-selection-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 18px;
+    border-top: 1px dashed #e6c5bf;
+    color: #60453f;
+}
+
+.hamper-selection-total strong {
+    font-size: 20px;
+    color: #d98d8d;
+}
+
+.select-hamper-button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 11px 16px;
+
+    border: 1px solid #d98d8d;
+    border-radius: 999px;
+
+    background: #fffaf7;
+    color: #d98d8d;
+
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.select-hamper-button:hover {
+    background: #fcebea;
+    transform: translateY(-2px);
+}
+
+/* ===============================
+   HAMPER PRODUCT SELECTION
+================================ */
+
+.hamper-products-area {
+    display: none;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px 40px;
+}
+
+.hamper-products-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.hamper-products-heading p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #d98d8d;
+    font-weight: 700;
+}
+
+.hamper-products-heading h2 {
+    margin-top: 8px;
+    font-family: "Playfair Display", Georgia, serif;
+    color: #60453f;
+}
+
+.hamper-products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.hamper-product-card {
+    background: white;
+    border: 1px solid #f0e3de;
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+.hamper-product-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: contain;
+    background: #f8e9e4;
+}
+
+.hamper-product-info {
+    padding: 16px;
+}
+
+.hamper-product-info h3 {
+    margin-bottom: 8px;
+    color: #60453f;
+}
+
+.hamper-product-info p {
+    margin-bottom: 12px;
+    color: #8c7772;
+}
+
+.hamper-select-button {
+    width: 100%;
+    border: 1px solid #d98d8d;
+    background: #fffaf7;
+    color: #d98d8d;
+    padding: 11px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.hamper-select-button:hover {
+    background: #fcebea;
+}
+
+@media (max-width: 900px) {
+    .hamper-products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .hamper-products-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===============================
+   HAMPER ITEM CONTROLS
+================================ */
+
+.hamper-selected-row {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px dashed #ead3cd;
+}
+
+.hamper-item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hamper-item-details strong {
+    color: #60453f;
+}
+
+.hamper-item-details span {
+    font-size: 13px;
+    color: #9a7a73;
+}
+
+.hamper-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.hamper-item-controls button {
+    border: 1px solid #e4b6ae;
+    background: #fffaf7;
+    color: #60453f;
+    min-width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.hamper-item-controls span {
+    min-width: 22px;
+    text-align: center;
+    font-weight: 600;
+    color: #60453f;
+}
+
+.hamper-remove-button {
+    width: auto !important;
+    padding: 0 12px;
+    border-radius: 999px !important;
+    color: #d98d8d !important;
+}
+
+.hamper-item-price {
+    color: #d98d8d;
+}
+
+@media (max-width: 650px) {
+
+    .hamper-selected-row {
+        grid-template-columns: 1fr;
+    }
+
+    .hamper-item-controls {
+        flex-wrap: wrap;
+    }
+}
+
+.hamper-order-button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 999px;
+    background: #d98d8d;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.hamper-order-button:hover {
+    opacity: 0.9;
+}
+
+<div class="hamper-size-choice">
+
+    <label for="hamper-size">
+        Choose Hamper Size ♡
+    </label>
+
+    <select id="hamper-size" onchange="updateHamperBox()">
+
+        <option value="small" data-charge="50">
+            Small Hamper - ₹50 packing
+        </option>
+
+        <option value="medium" data-charge="80">
+            Medium Hamper - ₹80 packing
+        </option>
+
+        <option value="large" data-charge="120">
+            Large Hamper - ₹120 packing
+        </option>
+
+    </select>
+
+</div>
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-yarn-img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    display: block;
+}
+
